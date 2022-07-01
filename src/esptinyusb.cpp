@@ -227,7 +227,7 @@ void EspTinyUSB::useMSC(bool en)
     enableMSC = en;
 }
 
-int usb_persist_mode = RESTART_BOOTLOADER;
+int usb_persist_mode = RESTART_NO_PERSIST;
 void EspTinyUSB::persistentReset(restart_type_t _usb_persist_mode)
 {
     usb_persist_mode = _usb_persist_mode;
