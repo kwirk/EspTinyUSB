@@ -107,6 +107,13 @@ TU_ATTR_WEAK int32_t tud_msc_write10_cb(uint8_t lun, uint32_t lba, uint32_t offs
   return -1;
 }
 
+bool tud_msc_is_writable_cb (uint8_t lun)
+{
+  (void) lun;
+
+  return false;
+}
+
 TU_ATTR_WEAK int32_t tud_msc_scsi_cb (uint8_t lun, uint8_t const scsi_cmd[16], void* buffer, uint16_t bufsize)
 {
 

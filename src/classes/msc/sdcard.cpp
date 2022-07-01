@@ -72,9 +72,8 @@ public:
     {
         log_v("default onwrite");
         (void) lun;
-        SD.writeRAW((uint8_t*)buffer, lba);
 
-        return bufsize;
+        return -1;
     }
 };
 
